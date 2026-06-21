@@ -24,6 +24,7 @@ def multi_turn_conversation():
     user_message_1 = "Sugiere una receta rápida para la cena con pollo."  
     print(f"Usuario: {user_message_1}")
 
+    # Agrega el mensaje del usuario al historial antes de llamar a la API
     conversation_history.append({
         "role": "user",
         "content": [{"text": user_message_1}]
@@ -40,7 +41,7 @@ def multi_turn_conversation():
         assistant_message_1 = response_1['output']['message']['content'][0]['text']
         print(f"Agente: {assistant_message_1}")
 
-        # Add assistant's response to history
+        # Agrega la respuesta del asistente al historial para el siguiente turno
         conversation_history.append({
             "role": "assistant",
             "content": [{"text": assistant_message_1}]
@@ -57,6 +58,7 @@ def multi_turn_conversation():
     user_message_2 = "Puedes hacerlo vegetariano en su lugar?"
     print(f"Usuario: {user_message_2}")
 
+    # Agrega el mensaje del usuario al historial antes de llamar a la API
     conversation_history.append({
         "role": "user",
         "content": [{"text": user_message_2}]
@@ -73,7 +75,7 @@ def multi_turn_conversation():
         assistant_message_2 = response_2['output']['message']['content'][0]['text']
         print(f"Agente: {assistant_message_2}")
 
-        # Añade la respuesta del asistente al historial para el siguiente turno
+        # Agrega la respuesta del asistente al historial para el siguiente turno
         conversation_history.append({
             "role": "assistant",
             "content": [{"text": assistant_message_2}]
@@ -89,7 +91,8 @@ def multi_turn_conversation():
 
     user_message_3 = "¿Cuánto tiempo tomará preparar esto?"
     print(f"Usuario: {user_message_3}")
-
+    
+    # Agrega el mensaje del usuario al historial antes de llamar a la API
     conversation_history.append({
         "role": "user",
         "content": [{"text": user_message_3}]
