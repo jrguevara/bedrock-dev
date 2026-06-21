@@ -122,6 +122,10 @@ def multi_turn_conversation():
     print("\n" + "=" * 60)
     print(" Nota: Cada llamada a la API incluye el historial completo de la conversación, lo que permite al modelo mantener el contexto a lo largo de múltiples turnos.")
 
+    # print("\n" + "=" * 60)
+    # print("Contenido del arreglo conversation_history (formateado):")
+    # print(conversation_history)
+
     """
     print("\n" + "=" * 60)
     # Mostrar el contenido del arreglo conversation_history sin formato 
