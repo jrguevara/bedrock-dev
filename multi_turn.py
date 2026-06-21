@@ -91,7 +91,7 @@ def multi_turn_conversation():
 
     user_message_3 = "¿Cuánto tiempo tomará preparar esto?"
     print(f"Usuario: {user_message_3}")
-    
+
     # Agrega el mensaje del usuario al historial antes de llamar a la API
     conversation_history.append({
         "role": "user",
@@ -121,6 +121,16 @@ def multi_turn_conversation():
 
     print("\n" + "=" * 60)
     print(" Nota: Cada llamada a la API incluye el historial completo de la conversación, lo que permite al modelo mantener el contexto a lo largo de múltiples turnos.")
+
+    """
+    print("\n" + "=" * 60)
+    # Mostrar el contenido del arreglo conversation_history sin formato 
+    print("Contenido del arreglo conversation_history:")
+    for idx, message in enumerate(conversation_history):
+        role = message['role']
+        content = message['content'][0]['text']
+        print(f"Turno {idx + 1} - {role.capitalize()}: {content}")
+    """
 
 if __name__ == "__main__":
     multi_turn_conversation()
